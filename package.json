@@ -1,0 +1,16 @@
+{
+  "name": "codex-test-repo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "pdfjs-dist": "^3.11.174",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
