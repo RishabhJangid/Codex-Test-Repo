@@ -27,14 +27,66 @@
         </header>
         <section class="content">
           <div class="placeholder">
-            <h2>Insights Coming Soon</h2>
+            <h2>Import Your Transactions</h2>
             <p>
-              This area will host interactive analytics, KPIs, and performance
-              charts.
+              Drag and drop your bank statements below or upload a file to see
+              the normalized transaction data that will power future insights.
             </p>
+            <div class="import-panel">
+              <div class="drop-zone" id="drop-zone" role="button" tabindex="0">
+                <input
+                  type="file"
+                  id="file-input"
+                  class="drop-zone__input"
+                  accept=".xlsx,.xlsm,.xls,.pdf"
+                />
+                <div class="drop-zone__content">
+                  <div class="drop-zone__icon">⬆️</div>
+                  <p class="drop-zone__title">Drop a statement file</p>
+                  <p class="drop-zone__subtitle">
+                    or <span class="browse-trigger">browse your computer</span>
+                  </p>
+                  <p class="drop-zone__hint">Supported: Excel workbooks, PDFs</p>
+                </div>
+              </div>
+              <div class="import-summary" id="import-summary" hidden>
+                <h3>Latest import</h3>
+                <p class="summary-error" id="summary-error" hidden></p>
+                <dl>
+                  <div class="summary-row">
+                    <dt>File</dt>
+                    <dd id="summary-file">—</dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Transactions</dt>
+                    <dd id="summary-count">0</dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Total amount</dt>
+                    <dd id="summary-total">0</dd>
+                  </div>
+                </dl>
+                <div class="summary-preview">
+                  <h4>Preview</h4>
+                  <table id="summary-table">
+                    <thead>
+                      <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th class="numeric">Amount</th>
+                        <th>Category</th>
+                        <th>Account</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
     </div>
+    <script type="module" src="./app.js"></script>
   </body>
 </html>
