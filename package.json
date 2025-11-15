@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start:server": "node public/dist/server.js",
+    "cli": "node public/dist/cli.js"
   },
   "dependencies": {
     "pdfjs-dist": "^3.11.174",

@@ -44,7 +44,7 @@ async function extractTextLines(file: File | Blob | ArrayBuffer): Promise<string
   }
 
   const loadingTask = getDocument({ data });
-  const pdf: PdfDocumentProxy = await loadingTask.promise;
+  const pdf = (await loadingTask.promise) as unknown as PdfDocumentProxy;
 
   const lines: string[] = [];
 

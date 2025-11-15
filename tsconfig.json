@@ -12,6 +12,6 @@
     "rootDir": "src",
     "declaration": false
   },
-  "include": ["src/import/**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }
